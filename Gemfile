@@ -23,13 +23,11 @@ gem 'jquery-rails'
 
 gem 'devise'
 gem 'haml'
-group :test, :development do
 gem 'decent_exposure'
 gem 'simple_form'
 gem 'pry'
 gem 'rspec'
 gem 'rspec-rails'
-end
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

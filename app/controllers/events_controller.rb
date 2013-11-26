@@ -1,5 +1,4 @@
 class EventsController < ApplicationController
-before_filter :authenticate_user!
   respond_to :html
   expose(:user) { User.find(params[:user_id]) }
 
