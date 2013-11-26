@@ -2,6 +2,7 @@ require 'faker'
 FactoryGirl.define do
   factory :event do
   name "Ruby Workshop"
+  description "Event of Ruby on Rails"
   start_date "11/12/2013"
   end_date "15/12/2013"
   hour "10:00"
