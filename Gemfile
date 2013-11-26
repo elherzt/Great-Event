@@ -23,9 +23,13 @@ gem 'jquery-rails'
 
 gem 'devise'
 gem 'haml'
-
+group :test, :development do
+gem 'decent_exposure'
+gem 'simple_form'
+gem 'pry'
 gem 'rspec'
 gem 'rspec-rails'
+end
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -42,9 +46,9 @@ group :test do
   gem 'factory_girl'
   gem 'factory_girl_rails'
   gem 'capybara'
-  gem 'database_cleaner'
   gem 'faker'
   gem 'shoulda-matchers'
+  gem 'selenium-webdriver'
 end
 
 # Use ActiveModel has_secure_password
