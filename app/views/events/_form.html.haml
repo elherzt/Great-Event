@@ -1,0 +1,13 @@
+= simple_form_for ([user, event]) do |f|
+  =f.input :name
+  =f.input :description, as: :text
+  =f.input :start_date 
+  =f.input :end_date 
+  =f.input :place
+  =f.input :cost
+  =f.input :hour
+  =f.input :requirements, as: :text
+  =f.input :notes, as: :text
+  =f.input :user_id, as: :hidden, value: current_user.id
+  =f.button :submit
+=link_to "Back", :back
