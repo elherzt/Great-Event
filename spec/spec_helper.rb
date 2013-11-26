@@ -27,3 +27,13 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 end
+
+
+def login 
+  user = create(:user)
+  visit '/users/sign_in'
+  fill_in "user[username]",    :with => user.username
+  fill_in "user[password]", :with => user.password
+  click_button "Sign in"
+  page.should have_content(user.username)
+end
