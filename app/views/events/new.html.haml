@@ -1,7 +1,9 @@
 = javascript_include_tag "application", "bootstrap-datepicker.js"
 = javascript_include_tag "application", "calendar.js" 
-%h1
-  New Event
-  by
-  =current_user.name
-=render "form"
+.page-header
+  %h1
+    New Event
+    by
+    =current_user.name
+.events_form
+  =render "form"
