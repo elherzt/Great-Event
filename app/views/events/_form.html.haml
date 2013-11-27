@@ -1,8 +1,8 @@
 = simple_form_for ([user, event]) do |f|
   =f.input :name
   =f.input :description, as: :text
-  =f.input :start_date 
-  =f.input :end_date 
+  =f.input :start_date, input_html:  {class: 'select_date'} 
+  =f.input :end_date, input_html:  {class: 'select_date'} 
   =f.input :place
   =f.input :cost
   =f.input :hour
