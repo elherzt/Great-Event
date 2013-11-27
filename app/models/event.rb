@@ -9,6 +9,7 @@ class Event < ActiveRecord::Base
     start_date.strftime("%d %B %Y")
   end
 
+
   def second_date
     if end_date.present?
       end_date.strftime("%d %B %Y")
