@@ -1,10 +1,14 @@
 class Event < ActiveRecord::Base
+  mount_uploader :poster, PosterUploader
   belongs_to :user
   validates :user_id, :name, :description, :place, :hour, :start_date, presence: true
   scope :current, -> { where "start_date < ? AND end_date > ?", Time.now, Time.now }
   scope :done, -> { where "end_date < ?", Time.now }
   scope :next, -> { where "start_date >= ? AND start_date <= ?", from, to }
 
+  def user_name
+    user.name
+  end
   def start_date_format
     start_date.strftime("%d %B %Y")
   end
@@ -17,7 +21,10 @@ class Event < ActiveRecord::Base
       start_date.strftime("%d %B %Y")
     end
   end
-
+  
+  def image
+    poster.present? ? poster.url : "event_default.jpg"
+  end
   def self.from
     Time.now
   end
