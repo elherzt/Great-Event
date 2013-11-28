@@ -11,7 +11,11 @@ spec/reports
 test/tmp
 test/version_tmp
 db/test.sqlite3
+db/development.sqlite3
 tmp
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
 log/development.log
 log/test.log
 # YARD artifacts

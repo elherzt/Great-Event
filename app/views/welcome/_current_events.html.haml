@@ -1,0 +1,10 @@
+-@events.current.each do |event|
+  %h3
+    =link_to event.name, user_event_path(event.user_id, event)
+  %h5
+    =event.description
+  %span
+    Date:
+    ="From #{event.start_date_format} to #{event.end_date_format}"
+  %br
+  %hr
