@@ -1,0 +1,9 @@
+-user.events.next.each do |e|
+  %h3
+    =e.name
+  %hr
+  %h5
+    =e.description
+    Date:
+    ="from #{e.start_date_format} to #{ e.end_date_format }"
+  %br
