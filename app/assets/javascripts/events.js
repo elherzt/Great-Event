@@ -33,4 +33,22 @@ $(document).ready(function(){
     $(".cost_event").slideUp();
     $(this).css("visibility", "hidden")
   });
+  
+  $("#event_chronicle").click(function(){
+    $('#chronicle_events').show(1000);
+    $('#photos_events').hide();
+    $('#data_events').hide();
+  });
+
+  $("#event_photos").click(function(){
+    $('#chronicle_events').hide();
+    $('#photos_events').show(1000)
+    $('#data_events').hide();
+  });
+
+  $("#event_data").click(function(){
+    $('#chronicle_events').hide()
+    $('#photos_events').hide()
+    $('#data_events').show(1000)
+  });
 });

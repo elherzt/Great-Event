@@ -16,6 +16,9 @@ class EventsController < ApplicationController
     end
   end
 
+  def chronicle
+
+  end
   private
 
   def event_params
