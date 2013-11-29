@@ -3,17 +3,34 @@
   %small
     (#{user.username})
 
-  %h3
-    Biography
-  Something....
+.content
+  .user-left
+    .panel.panel-default.user-information
+      .panel-heading
+        %h3.panel-title
+          Biography
+      .panel-body
+        Lorem impsu...
 
-  %h3
-    Personal Information
-  Something...
+    .panel.panel-default.user-information
+      .panel-heading
+        %h3.panel-title
+          Personal Information
+      .panel-body
+        Lorem impsu...
 
-  %h3
-    User's Next Events
-  =render "user_next_events"
-  %h3 
-    User-s Donde Events
-  =render "user_done_events"
+  .user-right
+    .panel.panel-default.user-events
+      .panel-heading
+        %h3.panel-title
+          User's Events
+      .panel-body
+        %h3 
+          User's Current Events
+        =render "user_done_events"
+        %h3
+          User's Next Events
+        =render "user_next_events"
+        %h3 
+          User's Donde Events
+        =render "user_done_events"

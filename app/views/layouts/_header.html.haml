@@ -5,11 +5,11 @@
         %h1 Great Events 
     #user_options
       - if !user_signed_in?
-        %ul.nav.navbar-nav
+        %ul.nav.navbar-nav.user
           %li
             = link_to 'Sign up', new_user_registration_path
-        %li
-          = link_to 'Log in', new_user_session_path
+          %li
+            = link_to 'Log in', new_user_session_path
       - else
         %ul
           %li.nav.navbar-nav.user
