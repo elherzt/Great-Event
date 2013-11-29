@@ -4,6 +4,11 @@
   %hr
   %h5
     =e.description
+  %h5
     Date:
     ="from #{e.start_date_format} to #{ e.end_date_format }"
+  -if current_user == user
+    =link_to "Edit", edit_user_event_path(user, e)
+    =link_to "Delete", user_event_path(e.user, e), method: :delete, confirmation: "Do you want to delete this event"
+  %hr.separator
   %br
