@@ -17,9 +17,22 @@ class EventsController < ApplicationController
     end
   end
 
-  def chronicle
-
+  def destroy 
+    event = Event.find(params[:id])
+    event.destroy
+    redirect_to user
   end
+
+  def update
+    event = Event.find(params[:id])
+    event.update_attributes(event_params)
+    if event.save
+      redirect_to user_event_path(id: event.id)
+    else
+      redirect_to "edit"
+    end
+  end
+
   private
 
   def event_params
