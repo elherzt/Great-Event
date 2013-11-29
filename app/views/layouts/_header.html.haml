@@ -1,21 +1,25 @@
-%header
-  %a{href: "#{root_path}"}
-    %h1 Great Events 
-  - if !user_signed_in?
-    %ul
-      %li
-        = link_to 'Sign up', new_user_registration_path
-      %li
-        = link_to 'Log in', new_user_session_path
-  - else
-    %ul
-      %li
-        %span
-          = link_to 'New Event', new_user_event_path(current_user)
+%header.navbar.navbar-inverse
+  .container-index
+    #logo
+      %a{href: "#{root_path}"}
+        %h1 Great Events 
+    #user_options
+      - if !user_signed_in?
+        %ul.nav.navbar-nav.user
+          %li
+            = link_to 'Sign up', new_user_registration_path
+          %li
+            = link_to 'Log in', new_user_session_path
+      - else
+        %ul
+          %li.nav.navbar-nav.user
+            %span
+              = link_to 'New Event', new_user_event_path(current_user)
 
-      %li
-        %span
-          = link_to current_user.username, current_user
-        |
-        %span
-          =link_to 'log out', destroy_user_session_path, method: :delete 
+          %li.nav.navbar-nav.user
+            %span
+              = link_to current_user.username, current_user
+              |
+            %span
+              =link_to 'log out', destroy_user_session_path, method: :delete 
+%hr

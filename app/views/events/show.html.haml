@@ -7,21 +7,21 @@
   =event.description
 =image_tag("#{event.image}", class: 'event_poster')
 %h3
-  %span
-  Date:
-  ="From #{event.start_date_format} to #{event.end_date_format}"
+  %span.event-info.date-event
+    Date:
+    ="From #{event.start_date_format} to #{event.end_date_format}"
 
 %h3
-  %span
+  %span.event-info
     Place:
     =event.place
-  %span
+  %span.event-info
     Cost:
     =event.cost
-  %span
+  %span.event-info
     Time:
-
     =event.hour
+
 %h3
   Requirements:
   =event.requirements

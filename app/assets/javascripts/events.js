@@ -35,20 +35,34 @@ $(document).ready(function(){
   });
   
   $("#event_chronicle").click(function(){
+    bottom_page();
     $('#chronicle_events').show(1000);
     $('#photos_events').hide();
     $('#data_events').hide();
   });
 
   $("#event_photos").click(function(){
+    bottom_page();
     $('#chronicle_events').hide();
     $('#photos_events').show(1000)
     $('#data_events').hide();
   });
 
   $("#event_data").click(function(){
+    bottom_page();
     $('#chronicle_events').hide()
     $('#photos_events').hide()
     $('#data_events').show(1000)
   });
+
+  function bottom_page() {
+    $('html, body').animate({
+      scrollTop: $(document).height()
+    },
+    1500);
+    return false;
+  }
+
+
+
 });

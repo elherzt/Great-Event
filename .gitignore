@@ -23,3 +23,6 @@ log/test.log
 _yardoc
 doc/
 *.sqlite3
+public/uploads/
+log/test/
+lib/templates/
