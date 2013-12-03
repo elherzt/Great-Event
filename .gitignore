@@ -24,5 +24,7 @@ _yardoc
 doc/
 *.sqlite3
 public/uploads/
+log/production.log
 log/test/
 lib/templates/
+public/assets/

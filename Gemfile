@@ -50,6 +50,8 @@ group :test do
   gem 'selenium-webdriver'
 end
 
+gem 'jasmine', :group => [:development, :test]
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
