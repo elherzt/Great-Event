@@ -26,3 +26,35 @@ describe ("Event for free", function(){
     expect( $(".cost_event").val() ).toEqual(0);
   });
 });
+
+describe ("puts a end date by default", function(){
+
+  beforeEach(function() {
+    jasmine.getFixtures().set(
+      '<input type="text" class="start_date" value="Nov/12/13"></input>' +
+      '<input type="text" class="end_date"></input>' +
+      '<input type="submit" class="create_event"></input>'
+    );
+  });
+
+  it("muts puts the start_date in end_date", function(){
+    $(".create_event").trigger('click');
+    expect( $(".end_date").val ).toEqual("Nov/12/13");
+  });
+});
+
+describe ("puts a text field to end date", function(){
+
+  beforeEach(function() {
+    jasmine.getFixtures().set(
+      '<input type="text" class="start_date"></input>' +
+      '<input type="text" class="end_date style="visibility: hidden;"></input>' +
+    );
+  });
+
+  it("muts puts the field to end date", function(){
+    $(".create_event").trigger('change');
+    expect( $(".end_date").css("visibility")).toEqual("visible");
+  });
+});
+
