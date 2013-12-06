@@ -1,0 +1,9 @@
+%h2 Found Events
+-@events_searched.each do |event|
+  %h3 
+    =link_to event.name, user_event_path(event.user_id, event)
+  %h3 
+    Date:
+    ="From #{event.start_date_format} to #{event.end_date_format}"
+  %hr
+%hr.separator
