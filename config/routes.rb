@@ -4,5 +4,6 @@ GreatEvent::Application.routes.draw do
    resources :users, only: :show do
      resources :events
    end
+   mount JasmineRails::Engine => "/specs" if defined?(JasmineRails)
 
 end

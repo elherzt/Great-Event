@@ -6,6 +6,14 @@ class Event < ActiveRecord::Base
   scope :done, -> { where "end_date < ?", Time.now }
   scope :next, -> { where "start_date >= ? AND start_date <= ?", from, to }
 
+  def self.search(search)
+    if search.present?
+      where("name LIKE ?", "%#{search}%")
+    else
+      nil
+    end
+  end
+
   def user_name
     user.name
   end

@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   before_action :authenticate_user!, :except => [:show]
-  respond_to :html
+  respond_to :html, :js
   expose(:user) { User.find(params[:user_id]) }
 
   expose(:events) do 

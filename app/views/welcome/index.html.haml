@@ -2,13 +2,14 @@
   %h1
     Welcome to Great Events! 
     %small Discover technology events
+=render "searcher"
 .picture-home
   =image_tag("home.jpg")
 .content
+  #events_searched
   %h3 Current Events
   =render "current_events"
   %h3 Next Events
   =render "next_events"
   %h3 Done Events
   =render "done_events"
-
